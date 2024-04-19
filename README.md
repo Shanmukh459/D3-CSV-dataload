@@ -1,8 +1,3 @@
-# D3 for CSV Data Loading
+# D3 for CSV Data Loading using React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A program that loads in some [data about CSS named colors](https://gist.github.com/Shanmukh459/cc27c72a6bd5e5d41618edf3eb91612a/) using D3 utilities, and uses React useState hook to keep track of the data. 
