@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { arc, csv } from 'd3';
+import { arc, csv, pie } from 'd3';
 // import { message } from './message';
 
 const csvUrl = 'https://gist.githubusercontent.com/Shanmukh459/cc27c72a6bd5e5d41618edf3eb91612a/raw/cssNamedColors.csv';
@@ -23,10 +23,17 @@ function App() {
     return <pre>Loading...</pre>
   }
 
+  const colorPie = pie().value(1)
+
   return (
     <svg height={height} width={width}>
       <g transform={`translate(${centerX}, ${centerY})`}>
         {
+          colorPie(data).map(d => (
+            <path fill={d.data['RGB hex value']} d={pieArc(d)} />
+          ))
+        }
+        {/* {
           data.map((d, i) => (
           <path 
             fill={d['RGB hex value']} 
@@ -36,7 +43,7 @@ function App() {
             })}
           />
         ))
-        }
+        } */}
       </g>  
     </svg>
   )
